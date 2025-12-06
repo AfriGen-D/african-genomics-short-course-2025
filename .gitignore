@@ -14,3 +14,6 @@
 !data/1k_afr_661_samples_phenotype.txt
 !images/
 !images/*.png
+!.github/
+!.github/workflows/
+!.github/workflows/*.yml
