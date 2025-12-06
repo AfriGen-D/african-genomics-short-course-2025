@@ -2,9 +2,9 @@
 
 A step-by-step tutorial for performing genotype imputation using the web-based AfriGen-D Imputation Service at [impute.afrigen-d.org](https://impute.afrigen-d.org).
 
-**Workshop:** ISCB Africa / ASBCB 2025 - AfriGen-D Training  
-**Date:** April 17, 2025  
-**Location:** Lagoon Beach Hotel, Cape Town  
+**Workshop:** 1st African Genomics Short Course - Cape Town 2025  
+**Date:** December 6, 2025
+**Location:** University of Cape Town, South Africa  
 **Duration:** 1.5 hours  
 
 ---
@@ -30,6 +30,16 @@ After completing this tutorial, you will be able to:
 - Personal laptop with internet connection and modern web browser (Chrome, Firefox, Safari, or Edge)
 - Basic understanding of genetic data formats (VCF)
 - AfriGen-D account (will be created during the workshop)
+
+### Tutorial Data
+
+Download the sample data files from GitHub:
+
+**[Download Tutorial Data](https://github.com/AfriGen-D/african-genomics-short-course-2025/tree/main/data)**
+
+The data folder contains:
+- `1k_afr_661_samples_4k_variants_hg38_agsc2025_chr22.vcf.gz` - Sparse genotype data (661 samples, ~4,400 variants, chromosome 22, hg38)
+- `1k_afr_661_samples_phenotype.txt` - Phenotype file for GWAS analysis
 
 ---
 

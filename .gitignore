@@ -10,7 +10,7 @@
 !index.html
 !Tutorial-AfriGenD-Imputation-Service.md
 !data/
-!data/sparse_peaks_dense.vcf.gz
+!data/1k_afr_661_samples_4k_variants_hg38_agsc2025_chr22.vcf.gz
 !data/1k_afr_661_samples_phenotype.txt
 !images/
 !images/*.png
