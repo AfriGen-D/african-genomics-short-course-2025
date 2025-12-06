@@ -2,7 +2,7 @@
 
 Tutorial materials for the **1st African Genomics Short Course - Cape Town 2025**.
 
-**[View Tutorial Online](https://mamanambiya.github.io/african-genomics-short-course-2025/)**
+**[View Tutorial Online](https://afrigen-d.github.io/african-genomics-short-course-2025/)**
 
 ## Overview
 
