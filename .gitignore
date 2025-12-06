@@ -1,6 +1,9 @@
 # Ignore everything
 *
 
+# Credentials (never track)
+.credentials
+
 # Except these files
 !.gitignore
 !README.md
