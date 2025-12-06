@@ -95,6 +95,55 @@ Sub-Saharan Africa has the greatest human genetic diversity. Standard reference 
 
 African-specific panels like those provided by AfriGen-D significantly improve imputation accuracy for African populations because they capture the unique genetic architecture of African genomes.
 
+### Factors Affecting Imputation Quality and Accuracy
+
+Several factors influence how well imputation performs. Understanding these helps you optimize your analysis and interpret results appropriately.
+
+#### 1. Reference Panel Characteristics
+
+| Factor | Impact on Quality |
+|--------|-------------------|
+| **Panel size** | Larger panels capture more haplotype diversity, improving accuracy |
+| **Population match** | Panels matching your study population yield better results |
+| **Sequencing depth** | Deeply sequenced panels have fewer errors to propagate |
+| **Variant density** | Denser panels provide better coverage of rare variants |
+
+#### 2. Study Data Quality
+
+| Factor | Impact on Quality |
+|--------|-------------------|
+| **Genotyping accuracy** | Errors in input data propagate through imputation |
+| **Missing data rate** | High missingness reduces information for haplotype matching |
+| **Sample size** | Larger samples improve phasing accuracy |
+| **SNP density** | More typed SNPs provide better scaffold for imputation |
+
+#### 3. Variant-Specific Factors
+
+| Factor | Impact on Quality |
+|--------|-------------------|
+| **Minor allele frequency (MAF)** | Rare variants (MAF < 1%) are harder to impute accurately |
+| **Local LD structure** | Regions with low LD have fewer informative markers nearby |
+| **Distance to typed SNPs** | Variants far from typed SNPs have lower accuracy |
+| **Structural complexity** | Repetitive regions and CNVs are challenging to impute |
+
+#### 4. Population-Specific Considerations
+
+| Factor | Impact on Quality |
+|--------|-------------------|
+| **Genetic diversity** | High-diversity populations (e.g., African) require larger, matched panels |
+| **Admixture** | Recently admixed populations may need multi-ancestry panels |
+| **Population bottlenecks** | Founder populations may have unique haplotypes not in panels |
+| **LD decay rate** | Populations with rapid LD decay need denser SNP arrays |
+
+> **💡 Key Insight: The R² Metric**
+>
+> Imputation quality is typically measured by **R²** (squared correlation between imputed and true genotypes):
+> - **R² > 0.8**: High quality - suitable for most analyses
+> - **R² 0.3-0.8**: Moderate quality - use with caution
+> - **R² < 0.3**: Low quality - consider filtering out
+>
+> The AfriGen-D service provides R² values for each imputed variant, allowing you to filter by quality.
+
 ### The AfriGen-D Imputation Service
 
 The AfriGen-D Imputation Service provides:
