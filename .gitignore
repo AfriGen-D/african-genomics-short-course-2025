@@ -8,3 +8,5 @@
 !data/
 !data/sparse_peaks_dense.vcf.gz
 !data/1k_afr_661_samples_phenotype.txt
+!images/
+!images/*.png
