@@ -2,9 +2,9 @@
 
 A step-by-step tutorial for performing genotype imputation using the web-based AfriGen-D Imputation Service at [impute.afrigen-d.org](https://impute.afrigen-d.org).
 
-**Workshop:** ISCB Africa / ASBCB 2025 - AfriGen-D Training  
-**Date:** April 17, 2025  
-**Location:** Lagoon Beach Hotel, Cape Town  
+**Workshop:** 1st African Genomics Short Course - Cape Town 2025  
+**Date:** December 6, 2025
+**Location:** University of Cape Town, South Africa  
 **Duration:** 1.5 hours  
 
 ---
@@ -30,6 +30,16 @@ After completing this tutorial, you will be able to:
 - Personal laptop with internet connection and modern web browser (Chrome, Firefox, Safari, or Edge)
 - Basic understanding of genetic data formats (VCF)
 - AfriGen-D account (will be created during the workshop)
+
+### Tutorial Data
+
+Download the sample data files from GitHub:
+
+**[Download Tutorial Data](https://github.com/AfriGen-D/african-genomics-short-course-2025/tree/main/data)**
+
+The data folder contains:
+- `1k_afr_661_samples_4k_variants_hg38_agsc2025_chr22.vcf.gz` - Sparse genotype data (661 samples, ~4,400 variants, chromosome 22, hg38)
+- `1k_afr_661_samples_phenotype.txt` - Phenotype file for GWAS analysis
 
 ---
 
@@ -84,6 +94,55 @@ Sub-Saharan Africa has the greatest human genetic diversity. Standard reference 
 - **Haplotype patterns** differ between populations
 
 African-specific panels like those provided by AfriGen-D significantly improve imputation accuracy for African populations because they capture the unique genetic architecture of African genomes.
+
+### Factors Affecting Imputation Quality and Accuracy
+
+Several factors influence how well imputation performs. Understanding these helps you optimize your analysis and interpret results appropriately.
+
+#### 1. Reference Panel Characteristics
+
+| Factor | Impact on Quality |
+|--------|-------------------|
+| **Panel size** | Larger panels capture more haplotype diversity, improving accuracy |
+| **Population match** | Panels matching your study population yield better results |
+| **Sequencing depth** | Deeply sequenced panels have fewer errors to propagate |
+| **Variant density** | Denser panels provide better coverage of rare variants |
+
+#### 2. Study Data Quality
+
+| Factor | Impact on Quality |
+|--------|-------------------|
+| **Genotyping accuracy** | Errors in input data propagate through imputation |
+| **Missing data rate** | High missingness reduces information for haplotype matching |
+| **Sample size** | Larger samples improve phasing accuracy |
+| **SNP density** | More typed SNPs provide better scaffold for imputation |
+
+#### 3. Variant-Specific Factors
+
+| Factor | Impact on Quality |
+|--------|-------------------|
+| **Minor allele frequency (MAF)** | Rare variants (MAF < 1%) are harder to impute accurately |
+| **Local LD structure** | Regions with low LD have fewer informative markers nearby |
+| **Distance to typed SNPs** | Variants far from typed SNPs have lower accuracy |
+| **Structural complexity** | Repetitive regions and CNVs are challenging to impute |
+
+#### 4. Population-Specific Considerations
+
+| Factor | Impact on Quality |
+|--------|-------------------|
+| **Genetic diversity** | High-diversity populations (e.g., African) require larger, matched panels |
+| **Admixture** | Recently admixed populations may need multi-ancestry panels |
+| **Population bottlenecks** | Founder populations may have unique haplotypes not in panels |
+| **LD decay rate** | Populations with rapid LD decay need denser SNP arrays |
+
+> **💡 Key Insight: The R² Metric**
+>
+> Imputation quality is typically measured by **R²** (squared correlation between imputed and true genotypes):
+> - **R² > 0.8**: High quality - suitable for most analyses
+> - **R² 0.3-0.8**: Moderate quality - use with caution
+> - **R² < 0.3**: Low quality - consider filtering out
+>
+> The AfriGen-D service provides R² values for each imputed variant, allowing you to filter by quality.
 
 ### The AfriGen-D Imputation Service
 
