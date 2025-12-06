@@ -4,6 +4,7 @@
 # Except these files
 !.gitignore
 !README.md
+!index.html
 !Tutorial-AfriGenD-Imputation-Service.md
 !data/
 !data/sparse_peaks_dense.vcf.gz
