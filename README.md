@@ -2,6 +2,8 @@
 
 Tutorial materials for the **1st African Genomics Short Course - Cape Town 2025**.
 
+**[View Tutorial Online](https://afrigen-d.github.io/african-genomics-short-course-2025/)**
+
 ## Overview
 
 This repository contains a hands-on tutorial for using the [AfriGen-D Imputation Service](https://impute.afrigen-d.org), a free web-based platform for African genotype imputation.
